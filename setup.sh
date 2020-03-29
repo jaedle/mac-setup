@@ -2,7 +2,7 @@
 set -ex
 clear
 
-sudo
+sudo true
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 install_and_update_homebrew() {
