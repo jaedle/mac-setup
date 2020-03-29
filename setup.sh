@@ -2,8 +2,8 @@
 set -ex
 clear
 
-sudo -v
-while true; do sudo true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+sudo
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 install_and_update_homebrew() {
     if test ! "$(command -v brew)"; then
